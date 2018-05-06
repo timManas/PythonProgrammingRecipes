@@ -1,5 +1,5 @@
-def main():
-    print "::::::::: Tuples and Sequences ::::::::: "
+def listMethod():
+    print "::::::::: Tuples  ::::::::: "
     print "Tuples are immutable. Once you define it, it cannot be deleted or modified (add, edit, etc)"
 
 
@@ -72,4 +72,4 @@ def main():
 
 # Main Class
 if __name__ == '__main__':
-    main()
+    listMethod()
