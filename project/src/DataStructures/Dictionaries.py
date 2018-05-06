@@ -2,7 +2,7 @@
 
 
 def dictionaryMain():
-    print "::::::::: Dictionaries  ::::::::: "
+    print("::::::::: Dictionaries  ::::::::: ")
 
     # How to create a Dictionary
     stringDic = {"key1": "value1",

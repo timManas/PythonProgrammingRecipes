@@ -83,8 +83,7 @@ def setMain():
     sortedSet = sorted(mixedTypeSet[:])
     print "Mixed Sorted(): ", sortedSet
 
-    sortedSet = sorted(nestedSet[:])
-    print "NestedSet Sorted(): ", sortedSet
+
 
     # Reverse
     reverseSet = mixedTypeSet[:]
@@ -121,9 +120,9 @@ def setMain():
     print "Notice how the Set only traverses until the shorter Set ends...Thats it =/ "
 
     # Filtering Sets
+    from collections import Set
     filteredSet = Set(filter(lambda x: x > 0, numericSet))  # Fetch all positive numbers in Set
     print "Filtered(Only postive numbers): ", filteredSet
-
     filteredSet = Set(filter(lambda x: x != "Hello", stringSet))
     print "Filtered('Not Hello'): ", filteredSet
 
