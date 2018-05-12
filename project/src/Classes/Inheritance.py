@@ -5,16 +5,16 @@ class Parent:
     __hiddenAttribute = "Hidden"
 
     def __init__(self):
-        print "Parent Class has been created"
+        print("Parent Class has been created")
 
     def parentMethod(self):
-        print "Parent Method Called"
+        print ("Parent Method Called")
 
     def setattr(self, attribute):
         Parent.parentAttribute = attribute              # Notice we still create our own attribute here
 
-    def getAttr(self):
-        print "Getting Parent Attribute: ", self.parentAttribute
+    def getParentAttr(self):
+        print ("Getting Parent Attribute: ", self.parentAttribute)
 
 class Child(Parent):
     'Parent Class Example'
@@ -22,16 +22,17 @@ class Child(Parent):
     __childHiddenAttribute = "Hidden_Child"
 
     def __init__(self):
-        print "Child Class have been created"
+        print ("Child Class have been created")
 
     def childMethod(self):
-        print "Child Method Called"
+        print ("Child Method Called")
 
-    def setattr(self, attribute):
+    def setChildAttribute(self, attribute):
         Child.childAttribute = attribute
 
-    def getAttr(self):
-        print "Getting Child Attribute: ", self.childAttribute
+
+    def getChildAttr(self):
+        print ("Getting Child Attribute: ", self.childAttribute)
 
 
 # Methods
@@ -42,33 +43,48 @@ def inheritanceExample():
     child2 = Child()
 
     # Print Child1 Methods
-    print "\n-----Child Methods"
+    print ("\n-----Child Methods")
     child1.childMethod()
-    child1.setattr("John")
-    child1.getAttr()
+    child1.setChildAttribute("John")        # This is not private ...but STATIC since it is declared outside of constructor
+    setattr(child1, "age", "20")            # REMEMBER THIS IS PRIVATE
+    print ("Child1 age: ", child1.age)
 
     # Print Child2 Methods
-    print "\n-----Child Methods"
+    print ("\n-----Child Methods")
     child2.childMethod()
-    child2.setattr("Michaela")
-    child2.getAttr()
-
+    child2.setChildAttribute("Michaela")    # This is not private ...but STATIC since it is declared outside of constructor
+    setattr(child2, "id", "06951789")            # REMEMBER THIS IS PRIVATE
+    print("Child1 age: ", child2.age)
 
     # Print Parent Methods
-    print "\n-----Parent Methods"
+    print ("\n-----Parent Methods")
     parent1.parentMethod()
     parent1.setattr("Tim")
-    parent1.getAttr()
-    print "Print Parent Hidden Attribute: ", parent1._Parent__hiddenAttribute
+    print ("Print Parent Hidden Attribute: ", parent1._Parent__hiddenAttribute)
 
 
 
 
-    print "Child getting Parent attribute: ", child1.parentAttribute        # How is this possible ?
-    print "\nChild LastName: " + child1.sharedAttribute
-    print "Access Hidden Attributes: ", child1._Parent__hiddenAttribute
+    print ("Child getting Parent attribute: ", child1.parentAttribute)        # How is this possible ?
+    print ("\nChild LastName: " + child1.sharedAttribute)
+    print ("Access Hidden Attributes: ", child1._Parent__hiddenAttribute)
 
 
 # Main
 if __name__ == '__main__':
     inheritanceExample()
+
+'''
+
+Classes
+
+What ? 
+
+Why ? 
+
+
+Notes
+- Remember Python does NOT use getter and setter methods 
+
+
+'''

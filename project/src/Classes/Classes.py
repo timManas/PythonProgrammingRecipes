@@ -15,14 +15,14 @@ class Employee:
         Employee.empCount += 1
 
     def displayEmployeeCount(self):
-        print "Employee: ", self.name, "      Salary: " , self.salary, "    id: ", self.id
+        print ("Employee: ", self.name, "      Salary: " , self.salary, "    id: ", self.id)
 
 
 # Methods
 def classExample():
 
     # Create an Instance of a class
-#    employee1 = Employee()                      # Why does this fail ?
+    #employee1 = Employee()                      # Why does this fail ?
     employee2 = Employee("Tim", "$70,000")
     employee3 = Employee("John", "$80,000")
     employee4 = Employee("Romero", "$90,000")
@@ -35,31 +35,31 @@ def classExample():
 
 
     # How to check if Attribute Exist
-    print "\nDoes attribute 'age' exists? ", hasattr(employee2, "age")
-    print "Does attribute 'id' exists? ", hasattr(employee2, "id")
-    print "Does attribute 'salary' exists?", hasattr(employee2, "salary")
+    print ("\nDoes attribute 'age' exists? ", hasattr(employee2, "age"))
+    print ("Does attribute 'id' exists? ", hasattr(employee2, "id"))
+    print ("Does attribute 'salary' exists?", hasattr(employee2, "salary"))
 
     # Get attribute if Attribute Exits
-    print "\nGet Attribute 'id' from Employee2: ", getattr(employee2, "id")
-    print "Get Attribute 'salary' from Employee2: ", getattr(employee2, "salary")
+    print ("\nGet Attribute 'id' from Employee2: ", getattr(employee2, "id"))
+    print ("Get Attribute 'salary' from Employee2: ", getattr(employee2, "salary"))
     #print "Get Attribute 'age' from Employee2: ", getattr(employee2, "age")     # This will cause a Error
 
 
     # Set attribute
-    print '\nSetting Attribute'
+    print ("\nSetting Attribute")
     setattr(employee3, 'id', "06951789")
     setattr(employee4, 'name',"George Soros")
     employee3.displayEmployeeCount()
     employee4.displayEmployeeCount()
 
     # Delete attribute
-    print '\nDeleting Attribute'
+    print ("\nDeleting Attribute")
     delattr(employee2, 'name')
     # employee2.displayEmployeeCount()            # This is will cause an Error since we deleted the Attribute
 
     # Built in Attributes
-    print "\nEmployee.__doc__: ", employee2.__doc__
-    print "Employee.__module__: ", employee2.__module__
+    print ("\nEmployee.__doc__: ", employee2.__doc__)
+    print ("Employee.__module__: ", employee2.__module__)
 
     # Class Inheritance
 

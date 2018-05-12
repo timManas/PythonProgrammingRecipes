@@ -51,35 +51,35 @@ def dictionaryMain():
     printDictionary("copyStringDic1", copyStringDic1)
 
     # Check the length of a dictionary
-    print "\nLength of CopyStringDic1: ", len(copyStringDic1)
+    print ("\nLength of CopyStringDic1: ", len(copyStringDic1))
 
     # Check if Key Exist in dictionary
-    print "\nCheck if Key 'Hello' exists: ", "Hello" in copyStringDic1
-    print "Check if Key 'Tim' exists: ", "Tim" in copyStringDic1
-    print "Check if Key '5' exits: ", 5 in mixDic
+    print ("\nCheck if Key 'Hello' exists: ", "Hello" in copyStringDic1)
+    print ("Check if Key 'Tim' exists: ", "Tim" in copyStringDic1)
+    print ("Check if Key '5' exits: ", 5 in mixDic)
 
     # Check if Value Exists in dictionary
-    print "\nCheck if Value 'value2' exists: ", "value2" in stringDic.values()
-    print "Check if Value 'Tim' exits: ", "Tim" in stringDic.values()
-    print "Check if Value 'True' exits: ", True in mixDic.values()
-    print "Check if Value '[1,2,3,4,5]' exits: ", [1, 2, 3, 4, 5] in mixDic.values()
+    print ("\nCheck if Value 'value2' exists: ", "value2" in stringDic.values())
+    print ("Check if Value 'Tim' exits: ", "Tim" in stringDic.values())
+    print ("Check if Value 'True' exits: ", True in mixDic.values())
+    print ("Check if Value '[1,2,3,4,5]' exits: ", [1, 2, 3, 4, 5] in mixDic.values())
 
 
     # Get only Keys from dictionary
     stringDicKeys = stringDic.keys()
-    print "\nKeys only of stringDic: ", stringDicKeys
+    print ("\nKeys only of stringDic: ", stringDicKeys)
 
     # Sort the dictionary
-    print "\nSorting the dictionary by Keys"
-    for key in sorted(copyStringDic1.iterkeys()):
-        print "%s: %s" % (key, copyStringDic1[key])
+    print ("\nSorting the dictionary by Keys")
+    for key in sorted(copyStringDic1):
+        print ("%s: %s" % (key, copyStringDic1[key]))
 
 
-    print "\nSorting the dictionary by Values"
+    print ("\nSorting the dictionary by Values")
 
 
     # Remove A key/value pair
-    print "\nRemove Key'Hello'"
+    print ("\nRemove Key'Hello'")
     del copyStringDic1["Hello"]
     del copyStringDic1["OMG"]
     del copyStringDic1["Smoking Sunset"]
@@ -89,9 +89,9 @@ def dictionaryMain():
 
 
 def printDictionary(title, dictionary):
-    print "\nNow printing: ", title
+    print ("\nNow printing: ", title)
     for key, val in dictionary.items():
-        print key, ": ", val
+        print (key, ": ", val)
 
 
 if __name__ == '__main__':
