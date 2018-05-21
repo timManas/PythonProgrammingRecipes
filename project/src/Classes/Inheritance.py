@@ -47,6 +47,9 @@ def inheritanceExample():
     child1.childMethod()
     child1.setChildAttribute("John")        # This is not private ...but STATIC since it is declared outside of constructor
     setattr(child1, "age", "20")            # REMEMBER THIS IS PRIVATE
+    child1.name = "Child1-Tim"
+    child1.age = "50"
+    print ("Child1 name: ", child1.name)
     print ("Child1 age: ", child1.age)
 
     # Print Child2 Methods
@@ -54,7 +57,11 @@ def inheritanceExample():
     child2.childMethod()
     child2.setChildAttribute("Michaela")    # This is not private ...but STATIC since it is declared outside of constructor
     setattr(child2, "id", "06951789")            # REMEMBER THIS IS PRIVATE
-    print("Child1 age: ", child2.age)
+    child2.name = "Child2-John"
+    child2.age = "100"
+    print("Child2 name: ", child2.name)
+    print("Child2 id: ", child2.id)
+    print("Child2 age: ", child2.age)
 
     # Print Parent Methods
     print ("\n-----Parent Methods")
