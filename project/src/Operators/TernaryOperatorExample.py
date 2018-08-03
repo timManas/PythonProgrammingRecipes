@@ -25,5 +25,9 @@ Syntax:
 [on_true] if [expression] else [on_false] 
 
 
+What ? 
+Just a way to simply the if else statement into one line =/ ...thats it 
+
+
 
 '''
