@@ -27,6 +27,11 @@ def main():
     builtInModifiedStringList = list(stringList)
     print("Create new List from list(): ", builtInModifiedStringList)
 
+    # Create a new List from a tuple
+    stringTuple = "Hello", "World", "Tim"
+    convertTuple2List = list(stringTuple)
+    print("\nConverted Tuple to List: ", convertTuple2List)
+
 
     # Append
     appendedSingle = stringList                         # This DOES NOT  create a new List
