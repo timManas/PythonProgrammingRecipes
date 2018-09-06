@@ -126,7 +126,7 @@ There are a total of 14 metacharcters and will be discussed as they follow into 
 
 \   Used to drop the special meaning of character
     following it (discussed below)
-[]  Represent a character class
+[]  Represent a character class ....REPRESENTS ONLY ONE CHARACTER PER []
 ^   Matches the beginning
 $   Matches the end
 .   Matches any character except newline
