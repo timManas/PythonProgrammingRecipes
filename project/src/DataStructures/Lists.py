@@ -159,11 +159,15 @@ def main():
     print("\nList as Queues")
     from collections import deque
     queueList = deque(mixedTypeList)
+    print("Original Queue: ", queueList)
+    queueList.append("NOOOWAYY")
     queueList.append("OMG")
     queueList.append("BECKY")
-    queueList.popleft()
-    print("Queue(Pop Left): ", queueList)
+    print("Appended to Queue: ", queueList)
+    print("Queue(Pop Left): ", queueList.popleft())
 
+    # Notice how BECKY is Last ...it is because it is appended as a list... not as an actual Queue
+    print("Queue Pop (Pops the Last Element): ", queueList.pop())
 
     # Clear
     del stringList[:]

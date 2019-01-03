@@ -7,8 +7,9 @@ def setMain():
     mixedTypeSet = {"Lets", "Rule", "This", "World", 2, "Night", True}
     # nestedSet = {{"a", "b", "c", "d"}, ("x", 8, "y", 9), [1, 2, 3, 4]}          # Cannot have variable type Sets
 
-    # Print Set
-    print("Print Element #2 in String Set: " + stringSet[1])
+    # Print Set - The following will raise an ERROR !!!
+    print("String Set: ", stringSet)
+    print("Print Element #2 in String Set: ", stringSet[1])
     print("Print Element #3 in numberSet: ", numericSet[3])
     print("Print All Elements in mixTypeSet: ", mixedTypeSet[1:7])
 
