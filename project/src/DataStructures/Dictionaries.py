@@ -1,6 +1,3 @@
-
-
-
 def dictionaryMain():
     print("::::::::: Dictionaries  ::::::::: ")
 
@@ -24,6 +21,7 @@ def dictionaryMain():
               "key3": [1,2,3,4,5],             # This is a key/List pair
               "key4": {"X", "Y", "Z"},          # This is key/Set pair
                 5: True
+              # [1,2,3,4]: "HelloWorld"           # This does not work since we cannot hash a list
     }
 
     # How to print a dictionary
@@ -68,6 +66,10 @@ def dictionaryMain():
     # Get only Keys from dictionary
     stringDicKeys = stringDic.keys()
     print ("\nKeys only of stringDic: ", stringDicKeys)
+
+    # Get only Values form dictionary
+    stringDicValues = stringDic.values()
+    print ("Values only of stringDic: ", stringDicValues)
 
     # Sort the dictionary
     print ("\nSorting the dictionary by Keys")

@@ -65,17 +65,24 @@ def setMain():
     # Sets as Stacks
     print("\nSet as Stacks")
     stackSet = set(mixedTypeSet)
-    stackSet.pop()
-    stackSet.pop()
-    stackSet.pop()
+    print("Original Set Stack: ", stackSet)
+    print("Popped: ", stackSet.pop())
+    print("Current Set Stack: ", stackSet)
+    print("Popped: ", stackSet.pop())
+    print("Current Set Stack: ", stackSet)
+    print("Popped: ", stackSet.pop())
+    print("Current Set Stack: ", stackSet)
     print("StackSet(Pop x 3): ", stackSet)
+    print("Notice: It does pop it in order")
 
     # Sets as Queues
     print("\nSet as Queues")
     from collections import deque
     queueSet = deque(mixedTypeSet)
     queueSet.append("OMG")
+    print("Current Set Queue: ", queueSet)
     queueSet.append("BECKY")
+    print("Current Set Queue: ", queueSet)
     queueSet.popleft()
     print("Queue(Pop Left): ", queueSet)
 

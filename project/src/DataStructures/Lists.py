@@ -9,7 +9,6 @@ def main():
                   ["x",8,"y",9],
                   [1,2,3,4]]
 
-
     # Print List
     print("Print Element #2 in String List: " + stringList[1])
     print("Print Element #3 in numberList: ", numbericList[3])
@@ -42,6 +41,7 @@ def main():
     appendList.append(["Hi", "Mr.", "Tim"])                 # Adds only at the End
     print("Append(): ", appendList)
     # appendedSingle = stringList.append("Hiya")            # Error - This will not Work since append will return None
+    print("Notice: There is no .add() for list ... you can only use insert, append or extend")
 
     # Extend
     newList = ["You", "Can", "Do", "The", "Thing"]
@@ -56,7 +56,7 @@ def main():
     # Index
     print("\nIndex of 'Goodbye': ", stringList.index("Goodbye")) #str() is required since we are getting a int from 'index()'
 
-    # Insert
+    # Insert ... This is the python equivalent of .add for list
     print("\nIf you want to add in the End of the list, use Append. Otherwise use insert")
     insertList = stringList[:]
     insertList.insert(0, "Start")
@@ -165,8 +165,11 @@ def main():
     queueList.append("BECKY")
     print("Appended to Queue: ", queueList)
     print("Queue(Pop Left): ", queueList.popleft())
+    print("Notice: how technically the 1st element is the first on the queue and we are append other elements to it")
+    print("Then notice, how we pop the first element by using popLeft()")
 
     # Notice how BECKY is Last ...it is because it is appended as a list... not as an actual Queue
+    # Also notice, ".appends" adds to the end of the list ...right side
     print("Queue Pop (Pops the Last Element): ", queueList.pop())
 
     # Clear
