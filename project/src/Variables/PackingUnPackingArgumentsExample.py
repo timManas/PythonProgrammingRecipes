@@ -16,11 +16,12 @@ def main():
     function2(10,20,30,40)
     function2("x", "y", "z")
 
-
+# This is packing with a set number of Arguments
 def function1(a,b,c,d):
     print("UnPacking Example Valus: ", a,b,c,d)
 
 
+# Packing with Arbritrary number of Arguments
 def function2(*args):
 
     for i in range(0, len(args)):

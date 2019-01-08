@@ -15,7 +15,7 @@ def printExample2():
 
 def printExample3():
     global var
-    var = "Hello World"
+    var = "Hello World"             # If you comment this out, you will get "CONQUER" ... because you fetch the global var.
     print("Printing Local Var: ", var)
 
 if __name__ == '__main__':

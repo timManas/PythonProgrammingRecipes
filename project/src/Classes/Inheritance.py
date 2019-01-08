@@ -16,7 +16,7 @@ class Parent:
     def getParentAttr(self):
         print ("Getting Parent Attribute: ", self.parentAttribute)
 
-class Child(Parent):
+class Child(Parent):                # Here we Inherit from Parent ...using the ()
     'Parent Class Example'
     childAttribute = "Child Attribute"
     __childHiddenAttribute = "Hidden_Child"
@@ -34,6 +34,9 @@ class Child(Parent):
     def getChildAttr(self):
         print ("Getting Child Attribute: ", self.childAttribute)
 
+    def getHiddenChildAttr(self):
+        print("Getting Hidden Child Attribute: ", self.__childHiddenAttribute)
+
 
 # Methods
 def inheritanceExample():
@@ -46,11 +49,16 @@ def inheritanceExample():
     print ("\n-----Child Methods")
     child1.childMethod()
     child1.setChildAttribute("John")        # This is not private ...but STATIC since it is declared outside of constructor
-    setattr(child1, "age", "20")            # REMEMBER THIS IS PRIVATE
+    setattr(child1, "age", "20")
+    setattr(child1, "__id", "1234")
     child1.name = "Child1-Tim"
     child1.age = "50"
     print ("Child1 name: ", child1.name)
     print ("Child1 age: ", child1.age)
+    # print ("Child1 __childHiddenAttribute: ", child1.__childHiddenAttribute)   # This WILL NOT work
+    hiddentChildAtrr = child1.getHiddenChildAttr()
+    print (hiddentChildAtrr)      # Why is this none ? Because "print() does NOT RETURN anything .. hence none
+
 
     # Print Child2 Methods
     print ("\n-----Child Methods")

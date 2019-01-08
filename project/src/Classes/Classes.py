@@ -6,9 +6,10 @@ class Employee:
     def __init__(self):                                 # Default Constructor
         self.name = "null"
         self.salary = "$0"
+        self.id = "00000"
         Employee.empCount += 1
 
-    def __init__(self, name, salary):
+    def __init__(self, name, salary):                  # Constructor with Arbritrary Values
         self.name = name
         self.salary = salary
         self.id = ""
@@ -22,7 +23,9 @@ class Employee:
 def classExample():
 
     # Create an Instance of a class
-    #employee1 = Employee()                      # Why does this fail ?
+    # employee1 = Employee()                      # Why does this fail ? IT DOESENT ... if we comment out the other default constructor. This this method passes
+    # employee1.displayEmployeeCount()
+
     employee2 = Employee("Tim", "$70,000")
     employee3 = Employee("John", "$80,000")
     employee4 = Employee("Romero", "$90,000")
@@ -42,7 +45,7 @@ def classExample():
     # Get attribute if Attribute Exits
     print ("\nGet Attribute 'id' from Employee2: ", getattr(employee2, "id"))
     print ("Get Attribute 'salary' from Employee2: ", getattr(employee2, "salary"))
-    #print "Get Attribute 'age' from Employee2: ", getattr(employee2, "age")     # This will cause a Error
+    # print ("Get Attribute 'age' from Employee2: ", getattr(employee2, "age"))    # This will cause a Error ...makes sense, we dont define "age" anywhere
 
 
     # Set attribute
