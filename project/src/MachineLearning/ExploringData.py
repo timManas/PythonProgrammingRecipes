@@ -43,6 +43,8 @@ def loadData():
     origModel = DecisionTreeRegressor(random_state=1)
     dataWithFeaturesOnly.head()
     origModel.fit(dataWithFeaturesOnly, priceSeries)
+
+    print("\nMake Predictions")
     print(origModel.predict(dataWithFeaturesOnly.head()))
 
 
