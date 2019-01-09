@@ -3,6 +3,7 @@ class Parent:
     'Parent Class Example'
     sharedAttribute = "Romero"
     __hiddenAttribute = "Hidden"
+    parentAttribute = "parentAttribute"
 
     def __init__(self):
         print("Parent Class has been created")
@@ -15,6 +16,9 @@ class Parent:
 
     def getParentAttr(self):
         print ("Getting Parent Attribute: ", self.parentAttribute)
+
+    def getParentHiddenAttribute(self):
+        print("Getting Hidden Parent Attribute: ", self.__hiddenAttribute)
 
 class Child(Parent):                # Here we Inherit from Parent ...using the ()
     'Parent Class Example'
@@ -47,42 +51,49 @@ def inheritanceExample():
 
     # Print Child1 Methods
     print ("\n-----Child Methods")
+
+    # Ex #1: Child calling Child Method
     child1.childMethod()
+
+    # Ex#2: Child setting Attribute of Child Object
     child1.setChildAttribute("John")        # This is not private ...but STATIC since it is declared outside of constructor
+
+    # Ex #3: Child adding additional attributes to object
     setattr(child1, "age", "20")
     setattr(child1, "__id", "1234")
+
+    # Ex #4: Child changing attributes of itself
     child1.name = "Child1-Tim"
     child1.age = "50"
     print ("Child1 name: ", child1.name)
     print ("Child1 age: ", child1.age)
+
     # print ("Child1 __childHiddenAttribute: ", child1.__childHiddenAttribute)   # This WILL NOT work
+
+    # Ex #5: Child access Hidden Element
     hiddentChildAtrr = child1.getHiddenChildAttr()
     print (hiddentChildAtrr)      # Why is this none ? Because "print() does NOT RETURN anything .. hence none
 
+    # Ex #6: Child access PUBLIC attribute of Parent Object
+    print("Inheriting fromt Parent: ", child1.parentAttribute)      # Notice child is able to access the parent public attribute
+    print ("Child getting Parent attribute: ", child1.parentAttribute)        # How is this possible ? Because of Magic ... nah its because child inherits parents properties and methods
+    print ("\nChild LastName: " + child1.sharedAttribute)
 
-    # Print Child2 Methods
-    print ("\n-----Child Methods")
-    child2.childMethod()
-    child2.setChildAttribute("Michaela")    # This is not private ...but STATIC since it is declared outside of constructor
-    setattr(child2, "id", "06951789")            # REMEMBER THIS IS PRIVATE
-    child2.name = "Child2-John"
-    child2.age = "100"
-    print("Child2 name: ", child2.name)
-    print("Child2 id: ", child2.id)
-    print("Child2 age: ", child2.age)
 
-    # Print Parent Methods
+    # Ex: #7: Child access PRIVATE attribute of Parent Object
+    print("Fetching parent Hidden attribute from child ")
+    child1.getParentHiddenAttribute()
+
+    # Ex #7b: Child accessing Prirvate attrivute of Parent object
+    print ("Another way of Child accessing Hidden Attributes from Parent: ", child1._Parent__hiddenAttribute)
+
+
+    # Example #8: Parent Element Print Parent Methods
     print ("\n-----Parent Methods")
     parent1.parentMethod()
     parent1.setattr("Tim")
     print ("Print Parent Hidden Attribute: ", parent1._Parent__hiddenAttribute)
 
-
-
-
-    print ("Child getting Parent attribute: ", child1.parentAttribute)        # How is this possible ?
-    print ("\nChild LastName: " + child1.sharedAttribute)
-    print ("Access Hidden Attributes: ", child1._Parent__hiddenAttribute)
 
 
 # Main
