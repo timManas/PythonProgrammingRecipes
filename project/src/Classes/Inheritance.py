@@ -1,6 +1,5 @@
 # Classes
 class Parent:
-    'Parent Class Example'
     sharedAttribute = "Romero"
     __hiddenAttribute = "Hidden"
     parentAttribute = "parentAttribute"
@@ -20,8 +19,16 @@ class Parent:
     def getParentHiddenAttribute(self):
         print("Getting Hidden Parent Attribute: ", self.__hiddenAttribute)
 
+
+    def __hiddenParentMethod(self):
+        print("Inside Hiddent Methid")
+        return  self.__hiddenAttribute
+
+
+
+
 class Child(Parent):                # Here we Inherit from Parent ...using the ()
-    'Parent Class Example'
+
     childAttribute = "Child Attribute"
     __childHiddenAttribute = "Hidden_Child"
 
@@ -48,6 +55,24 @@ def inheritanceExample():
     parent1 = Parent()
     child1 = Child()
     child2 = Child()
+
+
+    # Print Parent Methods
+    print("\n Parent Methods")
+
+    # Ex #1: Parent accessing public methods
+    parent1.parentMethod()
+
+    # Example #2: Parent Element Print Parent Methods
+    parent1.setattr("Tim")
+    print ("Print Parent Hidden Attribute: ", parent1._Parent__hiddenAttribute)
+
+
+
+    # Ex #2: Parent accessing private methods
+    # parent1.__hiddenMethod()              # Even Parent cannot access the hidden method
+    parent1._Parent__hiddenParentMethod()         # This is the ONLY  WAY to access the hidden method
+
 
     # Print Child1 Methods
     print ("\n-----Child Methods")
@@ -88,11 +113,12 @@ def inheritanceExample():
     print ("Another way of Child accessing Hidden Attributes from Parent: ", child1._Parent__hiddenAttribute)
 
 
-    # Example #8: Parent Element Print Parent Methods
-    print ("\n-----Parent Methods")
-    parent1.parentMethod()
-    parent1.setattr("Tim")
-    print ("Print Parent Hidden Attribute: ", parent1._Parent__hiddenAttribute)
+    # Example #8: Child accessing Private Parent method
+    # child1.__hiddenParentMethod                         # This will not work since hiddentParentMethod is private
+    child1._Parent__hiddenParentMethod
+
+
+
 
 
 
