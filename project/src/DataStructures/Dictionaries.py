@@ -48,6 +48,9 @@ def dictionaryMain():
     copyStringDic1["OMG"] = "BECKY"
     printDictionary("copyStringDic1", copyStringDic1)
 
+    # How to insert multiple items at once to dictionary
+    copyStringDic1.update({"Update1": 1, "Update2":2, "Update3":3})
+
     # Check the length of a dictionary
     print ("\nLength of CopyStringDic1: ", len(copyStringDic1))
 
