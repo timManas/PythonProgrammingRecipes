@@ -2,7 +2,7 @@ import itertools
 
 def listComprehension(symbol, type, side, TIF, price, quantity, algoParams):
 
-    id = [[a, b, c, d, e, f, g] for a in symbol
+    lc = [[a, b, c, d, e, f, g] for a in symbol
           for b in type
           for c in side
           for d in TIF
@@ -10,30 +10,30 @@ def listComprehension(symbol, type, side, TIF, price, quantity, algoParams):
           for f in quantity
           for g in algoParams]
 
-    for i in range(len(id)):
-        print(id[i], "\n")
+    for i in range(len(lc)):
+        print(lc[i], "\n")
 
-    print("Total Permutation Size: ", len(id))
+    print("Total Permutation Size (List Comprehension): ", len(lc))
 
     # printing result
-    print("All possible permutations using List Comprehension : " + str(id))
+    print("All possible permutations using List Comprehension : " + str(lc))
 
     pass
 
 
 def iterTools(symbol, type, side, TIF, price, quantity, algoParams):
 
-    combinedList = [symbol, type, side, TIF, quantity, algoParams]
+    combinedList = [symbol, type, side, TIF, price, quantity, algoParams]
 
-    id = list(itertools.product(*combinedList))
+    it = list(itertools.product(*combinedList))
 
-    for i in range(len(id)):
-        print(id[i], "\n")
+    for i in range(len(it)):
+        print(it[i], "\n")
 
-    print("Total Permutation Size: ", len(id))
+    print("Total Permutation Size (ITERTools): ", len(it))
 
     # printing result
-    print("All possible permutations using IterTools : " + str(id))
+    print("All possible permutations using IterTools : " + str(it))
 
     pass
 

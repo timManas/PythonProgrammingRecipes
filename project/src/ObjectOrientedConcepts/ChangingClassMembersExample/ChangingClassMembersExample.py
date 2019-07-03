@@ -1,4 +1,5 @@
-from project.src.ObjectOrientedConcepts.ChangingClassMembersExample.CSStudent import *
+# from project.src.ObjectOrientedConcepts.ChangingClassMembersExample.CSStudent import *   # This works
+from project.src.ObjectOrientedConcepts.ChangingClassMembersExample import CSStudent    # This doesent work ?
 
 def main():
 

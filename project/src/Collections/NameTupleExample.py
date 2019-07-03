@@ -3,13 +3,14 @@ import collections
 def main():
 
     # Instantiate a namedTuple
-    Student = collections.namedtuple("Student", ["name", "age", "DOB"])
+    Student = collections.namedtuple("Student", ["name", "age", "DOB"])     # Notice this is like the blue print for all student formats
+    Worker = collections.namedtuple("Worker", ["name", "age", "ID"])
     print("Student NameTuple: ", Student)
+    print("Student NameTuple: ", Worker)
 
     # Add values
     student1 = Student("Tim", "31", "1987")
     print("student1 NT: ", student1)
-
 
     # Access element using Index
     print("\nAccess Element by Index")
@@ -37,7 +38,7 @@ def main():
 
     # Convert dictionary to NT
     dict1 = {'name': "James", 'age': 19, 'DOB': '1391997'}
-    print("Convert Dictionary to NT: ", Student(**dict1))
+    print("Convert Dictionary to NT: ", Student(**dict1))           # Note: The ** converts dictionary to a tuple
 
     # Return all fields
     print("Return all fields: ", student1._fields)
@@ -53,11 +54,12 @@ if __name__ == '__main__':
 '''
 NameTuple 
 
-REMEBER ... THIS IS STILL A TUPLE ... NOT A DICTIONARY ... 
+REMEMBER ... THIS IS STILL A TUPLE ... NOT A DICTIONARY ... 
 You can access the values like a dictionary but ultimately it is still ONE TUPLE WITH KEY/VALUE PAIRS as Elements
 
 
-What ? 
+What ?  
+- Light weight, easy to create objects
 - Allows access to elements either by index or by key
 - So you can fetch elements   like a list using the index or  like a map using key
 
@@ -67,6 +69,7 @@ How ?
 - Add Elements to it 
 
 Note
-- Similar to a Dictionaty, you need to add key/value pairs to NT
+- Similar to a Dictionary, you need to add key/value pairs to this object
+- YOU SHOULD USE NAME TUPLES instead of Tuples anywhere object notation will make your code more readable
 
 '''

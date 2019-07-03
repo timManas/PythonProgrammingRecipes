@@ -3,7 +3,7 @@ import requests
 
 def main():
 
-    createGetRequest()
+    # createGetRequest()            # TODO :: Need to fix this
     createPostRequest()
 
 
@@ -44,7 +44,7 @@ def createPostRequest():
     API_KEY = "9b69dce56a6aab2bda995f25ea539f23"
 
     #3. Add additional parameters
-    sourceCode = "Helloworld"
+    sourceCode = "Helloworldzzzzz"
 
     data = {"api_dev_key" : API_KEY,
             "api_option" : "paste",

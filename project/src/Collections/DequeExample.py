@@ -2,7 +2,7 @@ import collections
 
 def main():
 
-    list1 = [1,4,3,7,3,8,9]
+    list1 = [1,4,6,7,3,8,9]
 
     # Instantiate a Deque
     deque1 = collections.deque(list1)

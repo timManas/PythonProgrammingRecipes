@@ -9,11 +9,16 @@ def main():
 
     # Print HeapQ
     print("HeapQ1: ", list(list1))
+    print("Notice how the list has the smallest element on the LEFT")\
+
 
     # Insert Elements
     heapq.heappush(list1, 100)
     print("\nInsert 100 into heap: ", list1)
-    print("**Notice that list1 has added the value 100 ")
+    heapq.heappush(list1, 8)
+    print("Insert 8 into heap: ", list1)
+    heapq.heappush(list1, 1)
+    print("Insert 1 into heap: ", list1)
 
     # Remove and Pop smallest elements
     print("\nPopping from heap: ", heapq.heappop(list1))
@@ -22,11 +27,11 @@ def main():
 
 
     # PushPop  - combines push and pop operations in one statement for better efficiency
-    print("\npushPop: ", heapq.heappushpop(list1, 99))
+    print("\npushPop: ", heapq.heappushpop(list1, 999))
     print("Heap After pushpop: ", list1)
 
     # HeadReplace - Pops element first ...then pushes element. The larger value than pushed element is returned
-    print("\nHeadReplace: ", heapq.heapreplace(list1, 1))
+    print("\nHeadReplace: ", heapq.heapreplace(list1, 1111))
     print("Heap After pushpop: ", list1)
 
 

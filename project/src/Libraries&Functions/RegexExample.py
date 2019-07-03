@@ -7,6 +7,9 @@ from re import escape
 
 
 def regexCompile(text1, text2, text3):
+    print("Text1: ", text1)
+    print("Text2: ", text2)
+    print("Text3: ", text3)
     print("\n\nCompile")
 
     # Compile() creates an Regex character class from [a-e]
@@ -21,6 +24,10 @@ def regexCompile(text1, text2, text3):
     print("[abcde]: ", pattern.findall(text1))
 
     print("Notice the [a-e] & [abcde] return the same value\n")
+
+    # () - Measures Full words
+    pattern = re.compile("(Tim|you)")
+    print("(Tim|you): ", pattern.findall(text1), "\n")
 
     # \d is equivalent to [0-9]
     pattern = re.compile("\d")

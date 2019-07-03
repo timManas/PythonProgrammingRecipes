@@ -2,47 +2,47 @@ import enum
 
 def main():
 
-    # Print enum member using String
+    # Ex1: Print enum member using String
     print("Print enum member using String")
     print("Enum member: ", Animal.dog)
     print("Enum member: ", Animal.cat)
 
 
-    # Print enum member using repr
+    # Ex2: Print enum member using repr
     print("\nPrint enum member using repr")
     print("Enum member: ", repr(Animal.dog))
     print("Enum member: ", repr(Animal.lion))
 
-    # Print the type of enum member  using type()
+    # Ex3: Print the type of enum member  using type()
     print("\nPrint the type of enum member  using type()")
     print("Enum member: ", type(Animal.dog))
     print("Enum member: ", type(Animal.lion))
 
-    # Print the name of the enum member using "name" keyword
+    # Ex4: Print the name of the enum member using "name" keyword
     print("\nPrint the name of the enum member using 'name' keyword")
     print("Enum member: ", Animal.dog.name)
     print("Enum member: ", Animal.cat.name)
 
-    # Iterate through an enum
+    # Ex5: Iterate through an enum
     print("\nIterate through an enum")
     for Anim in Animal:
         print("Enum Member: ", Anim)
 
-    # Use Enum to create a Dictionary or Set
+    # Ex6: Use Enum to create a Dictionary or Set
     print("\nCreate a dict using an Enum")
     dict1 = {}
     dict1[Animal.dog.name] = "DOOOG"
     dict1[Animal.cat.name] = "CAAAT"
     print("enum to Dict: ", dict1)
 
-    # Access enum memebers by value
+    # Ex7: Access enum memebers by value
     print("\nAccess enum memebers by value")
     print("Access the 1st Enum member: ", Animal(1))
     print("Access the 2nd Enum member: ", Animal(2))
     print("Access the 3rd Enum member: ", Animal(3))
     # print("Access the 3rd Enum member: ", Animal(4))      # Should cause Error
 
-    # Access enum members by name
+    # Ex8: Access enum members by name
     print("\nAccess enum members by name")
     print("Access the 1st Enum member: ", Animal["dog"])
     print("Access the 2nd Enum member: ", Animal["cat"])
@@ -53,14 +53,14 @@ def main():
     enumMember = Animal.cat
 
     print("Display Enum Key / value pair")
-    # Display the name
+    # Ex9: Display the name
     print("\nDisplay name: ", enumMember.name)
 
-    # Display the value
+    # Ex9b: Display the value
     print("Display value: ", enumMember.value)
 
 
-    # Compare num members by Identity
+    # Ex10: Compare num members by Identity
     print("\nCompare num members by Identity")
     if enumMember is Animal.dog:
         print("Correct: Enum member is a dog")
@@ -84,7 +84,7 @@ class Animal(enum.Enum):
     lion = 3
 
 
-    pass
+
 
 
 if __name__ == '__main__':

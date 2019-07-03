@@ -7,10 +7,12 @@ def main():
     print("Simple Method: ", min)
 
     #Using tuple
+    # If true - display Hello
+    # If false - display World
     print("Tuple Ternary Example: ", ("Hello", "World")[a < b])
 
     # Using Dictionary
-    print("Dictionary Example: ", {True: "True", False: "False"}[a < b])
+    print("Dictionary Example: ", {True: "TrueX", False: "FalseX"}[a < b])
 
     # Using lambda ... dont forget the ()
     print("Lambda Example: ", (lambda: "B", lambda: "A")[a < b]())

@@ -1,12 +1,12 @@
 def main():
 
-    # While loop
+    # Ex1: While loop
     count = 0
     while(count < 3):
         print("Count: ", count)
         count = count + 1
 
-    # For In Loop
+    # Ex2: For In Loop
     print("List Iteration")
     list1 = ["Hello", "World", "&", "Tim"]
     for i in list1:
@@ -32,16 +32,16 @@ def main():
 
 
 
-    # Continue Statement
+    # Ex3: Continue Statement
     print("\nContinue Example")
     for letter in "HelloWorld":
-        if(letter == "e"):
+        if letter == "e":
             continue
 
         print(letter)
 
 
-    # Break statement
+    # Ex4: Break statement
     print("\nBreak Example")
     for letter in "HelloMrTim":
         if(letter == "T"):
