@@ -24,6 +24,15 @@ def dictionaryMain():
               # [1,2,3,4]: "HelloWorld"           # This does not work since we cannot hash a list
     }
 
+    stringIntDic = { "row0": 4,
+                    "row1" : 3,
+                    "row2" : 5,
+                    "row3" : 1,
+                    "row4" : 2,
+                    "row5" : 7,
+                    "row6" : 2
+    }
+
     # How to print a dictionary
     print("\nHow to print a dictionary")
     printDictionary("StringDic", stringDic)
@@ -80,7 +89,18 @@ def dictionaryMain():
         print ("%s: %s" % (key, copyStringDic1[key]))
 
 
+    # Sort Dicitonary by Value
     print ("\nSorting the dictionary by Values")
+    print ("Before Sorted: ", stringIntDic)
+    import operator
+    sortedDicByValue = sorted(stringIntDic.items(), key=operator.itemgetter(1)) # the 1 is the index for the values, setting it to 0 will sort it by keys
+    print("Pre Python3.6: After Sorted: ", sortedDicByValue)
+    print("Note: SortedDic comes in the form of a tuple")
+
+    sortedDicByValuePython36 = {k:v for k,v in sorted(stringIntDic.items(), key= lambda item: item[1])} # Settting 1 to 0, will sort by Key instead
+    print("Python3.6+: After Sorted: ", sortedDicByValuePython36)
+
+
 
 
     # Remove A key/value pair

@@ -19,7 +19,7 @@ Note
 - By Default, you CANNOT import files from a different python "FOLDER" (FOLDER ...NOT PACKAGE)
 
 Packages
-- Carry the __init__.py. This REQUIRED  to be used as part of a package
+- Carry the __init__.py. This REQUIRED  tof be used as part of a package
 - If you remove this file - Python will no longer look for sub modules in that directory
     -> ANY IMPORTS from this file will fail
     

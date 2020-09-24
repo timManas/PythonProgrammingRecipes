@@ -32,7 +32,7 @@ if __name__ == '__main__':
 
 '''
 
-Module
+Module 
 - Similar to classes
 - Allows developer to group code together
 

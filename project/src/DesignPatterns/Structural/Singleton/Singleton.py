@@ -24,20 +24,21 @@ class Singleton:
 
 def main():
 
-    # Creating a Singleton
+    # Creating a Singleton using ()
     singleton1 = Singleton()
     singleton1.setVar("Modified #1")
     print("Singleton1: ", singleton1)
     print("Singleton1 Var: ", singleton1.var)
 
+    # Creating a Singleton using getInstance()
     singleton2 = Singleton.getInstance()
     singleton2.setVar("Modified #2")
-    print("Singleton2: ", singleton2)
+    print("\nSingleton2: ", singleton2)
     print("Singleton2 Var: ", singleton2.var)
 
     singleton3 = Singleton.getInstance()
     singleton3.setVar("Modified #3")
-    print("Singleton3: ", singleton3)
+    print("\nSingleton3: ", singleton3)
     print("Singleton3 Var: ", singleton3.var)
 
 
